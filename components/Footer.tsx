@@ -1,9 +1,33 @@
 import Image from "next/image";
+import Link from "next/link";
+import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 
 function Footer() {
+  const socials = [
+    {
+      link: "https://www.linkedin.com/in/polpages/",
+      label: "Linkedin",
+      Icon: SiLinkedin,
+    },
+    {
+      link: "https://github.com/polpagesdev",
+      label: "Github",
+      Icon: SiGithub,
+    },
+    {
+      link: "mailto:polpages1999@gmail.com",
+      label: "Mail",
+      Icon: SiGmail,
+    },
+  ];
+
   return (
-    <footer className="sm:px-16 py-4 px-8 flex justify-between items-center gap-2 flex-wrap bg-[#161921]">
-      <p className="text-base font-bold text-white">@2023 EpicAnimeVault</p>
+    <nav className="sm:px-16 py-8 px-8 flex justify-between items-center gap-2 flex-wrap">
+      <a href="https://www.polpages.dev">
+        <h1 className="text-xl font-bold underline underline-offset-8 decoration-[#ffc800] -rotate-2 lg:hover:-rotate-6 lg:hover:scale-105 lg:transition-all">
+          polpages.dev
+        </h1>
+      </a>
       <Image
         src="./logo.svg"
         alt="logo"
@@ -11,30 +35,22 @@ function Footer() {
         height={44}
         className="object-contain"
       />
-      <div className="flex items-center gap-6">
-        <Image
-          src="./tiktok.svg"
-          alt="logo"
-          width={19}
-          height={19}
-          className="object-contain"
-        />
-        <Image
-          src="./instagram.svg"
-          alt="logo"
-          width={19}
-          height={19}
-          className="object-contain"
-        />
-        <Image
-          src="./twitter.svg"
-          alt="logo"
-          width={19}
-          height={19}
-          className="object-contain"
-        />
+      <div className="flex items-center gap-2 sm:gap-4">
+        {socials.map((social, index) => {
+          const Icon = social.Icon;
+          return (
+            <Link
+              href={social.link}
+              key={index}
+              aria-label={social.label}
+              target="_blank"
+            >
+              <Icon className="w-5 h-5 hover:scale-125 transition-all" />
+            </Link>
+          );
+        })}
       </div>
-    </footer>
+    </nav>
   );
 }
 
