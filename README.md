@@ -1,9 +1,18 @@
-# Build Modern Next 14 Server Side App with Server Actions, Infinite Scroll & Framer Motion Animations
+# Next.js Anime Series App
 
-![Anime Website](https://i.ibb.co/MG1nbqt/YT-Thumbnails-2.png)
+This is a Next.js 14 application that fetches data from an API and displays anime series cards. The app uses server actions to retrieve data and render anime series information.
 
-### [🌟 Become a top 1% Next.js 14 developer in only one course](https://jsmastery.pro/next14)
-### [🚀 Land your dream programming job in 6 months](https://jsmastery.pro/masterclass)
-### [📙 Free Three.js Cheatsheet](https://resource.jsmastery.pro/threejs-cheatsheet)
-### [🌐 Best Hosting for Your Websites](https://hostinger.com/javascript10)
+## Features
 
+- Fetches anime series data from an external API
+- Displays anime series cards with relevant information
+- Uses server actions for data fetching
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (v14 or later)
+- npm or yarn
+
+Then, run `npm install` and `npm run dev`.
